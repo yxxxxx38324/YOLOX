@@ -11,12 +11,13 @@ class Exp(MyExp):
         super(Exp, self).__init__()
         self.depth = 1.0
         self.width = 1.0
-        self.exp_name = os.path.split(os.path.realpath(__file__))[1].split(".")[0]
+        self.exp_name = os.path.split(os.path.realpath(_get_exp_file__))[1].split(".")[0]
 
         # Define yourself dataset path
         self.data_dir = "datasets/coco_format_dataset"
         self.train_ann = "instances_train2021.json"
         self.val_ann = "instances_val2021.json"
+        self.output_dir = "/home/featurize/YOLOX_outputs"
 
         self.num_classes = 3
 
